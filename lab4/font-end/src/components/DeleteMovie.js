@@ -15,13 +15,13 @@ const DeleteMovie = ({ onChangeForm, deleteMovie }) => {
                   className="form-control"
                   name="delete_text"
                   id="delete_text"
-                  placeholder="title"
+                  placeholder="MovieName"
                 />
               </div>
             </div>
             <button
               type="button"
-              onClick={(e) => deleteMovie()}
+              onClick={(e) => deleteMovie(deleteMovie)}
               className="btn btn-danger"
             >
               Delete
