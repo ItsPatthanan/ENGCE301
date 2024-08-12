@@ -88,12 +88,12 @@ async function postMovie(p_title, p_genre, p_director, p_release_year) {
 }
 
 async function deleteMovie(delete_text) {
+  console.log(delete_text);
   var Query;
   var pool = mysql.createPool(config);
 
   return new Promise((resolve, reject) => {
     Query = `DELETE FROM movies WHERE title LIKE '%${delete_text}%'`;
-
     pool.query(Query, function (error, results, fields) {
       if (error) throw error;
 
